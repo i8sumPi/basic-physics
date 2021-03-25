@@ -22,18 +22,18 @@ It has everything you need for most games, for example platformers or angry bird
 
 
 # Table of Contents
-1. Examples
-    1. Cat Throwing Game
-3. Installation
-4. Objects
-    1. Static Objects
-    2. Moving Objects
-3. Make Time Happen
-4. Graphics
-    1. Make the Moving Object an Image
-5. Custom Parameters
-6. Changing the Level
-7. Level Design
+1. [Examples](https://github.com/i8sumPi/basic-physics/blob/main/README.md#examples)
+    1. [Cat Throwing Game](https://github.com/i8sumPi/basic-physics/blob/main/README.md#cat-throwing-game)
+3. [Installation](https://github.com/i8sumPi/basic-physics/blob/main/README.md#installation)
+4. [Objects](https://github.com/i8sumPi/basic-physics/blob/main/README.md#objects)
+    1. [Static Objects](https://github.com/i8sumPi/basic-physics/blob/main/README.md#static-objects)
+    2. [Moving Objects](https://github.com/i8sumPi/basic-physics/blob/main/README.md#moving-objects)
+3. [Make Time Happen](https://github.com/i8sumPi/basic-physics/blob/main/README.md#make-time-happen)
+4. [Graphics](https://github.com/i8sumPi/basic-physics/blob/main/README.md#graphics)
+    1. [Make the Moving Object an Image](https://github.com/i8sumPi/basic-physics/blob/main/README.md#make-the-moving-object-an-image)
+5. [Custom Parameters](https://github.com/i8sumPi/basic-physics/blob/main/README.md#custom-parameters)
+6. [Changing the Level](https://github.com/i8sumPi/basic-physics/blob/main/README.md#changing-the-level)
+7. [Level Design](https://github.com/i8sumPi/basic-physics/blob/main/README.md#level-design)
 
 
 # Examples:
