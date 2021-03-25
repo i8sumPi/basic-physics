@@ -23,14 +23,14 @@ It has everything you need for most games, for example platformers or angry bird
 
 # Table of Contents
 1. Examples
-  a. Cat Throwing Game
+    1. Cat Throwing Game
 3. Installation
 4. Objects
-  a. Static Objects
-  b. Moving Objects
+    1. Static Objects
+    2. Moving Objects
 3. Make Time Happen
 4. Graphics
-  a. Make the Moving Object an Image
+    1. Make the Moving Object an Image
 5. Custom Parameters
 6. Level Design
 
