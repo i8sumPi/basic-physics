@@ -52,14 +52,14 @@ Where the diagonal line goes from the point (x1,y1) to the point (x2,y2).
 As of now, the only moving objects supported are circles. A moving object would be the player in a game (see [how to use static objects for enemies]). You can add a moving object using:
 ```js
 var player = new MovingObject({
-	x: ___, //the initial x position of the object
-	y: ___, //the initial y position of the object
-	xSp: ___, //the initial x speed of the object
-	ySp: ___, //the initial y speed of the object
-	size: ___, //the diameter of the circle
-	rotation: ___, //the initial rotation, in radians
-	rotSp: ___, //the initial rotation speed, in radians
-	bounciness: ___ //how bouncy the object is
+  x: ___, //the initial x position of the object
+  y: ___, //the initial y position of the object
+  xSp: ___, //the initial x speed of the object
+  ySp: ___, //the initial y speed of the object
+  size: ___, //the diameter of the circle
+  rotation: ___, //the initial rotation, in radians
+  rotSp: ___, //the initial rotation speed, in radians
+  bounciness: ___ //how bouncy the object is
 });
 ```
 A low bounciness, such as 0.2, would make it not bounce very much, while a high bounciness, such as 0.9, would make it bounce to 90% of its previous height. 
@@ -79,11 +79,18 @@ Right now, the graphics and display of the objects is pretty bland. You might wa
 To make all of the rectangles red, use:
 ```js
 Rectangle.prototype.draw = function(){
-	//enter custom drawing function here
+  //enter custom drawing function here
   ctx.fillStyle = "red";
   ctx.fillRect(this.x,this.y,this.width,this.height);
 }
 ```
 Note that I am using `function(){` instead of `()=>{`. To access information about the object you are drawing, use `this`.
 
-To change the function to ...
+To change the function for diagonals, use:
+```js
+Diag.prototype.draw = function(){
+  //enter custom drawing function here
+}
+```
+
+And to change the function for 
