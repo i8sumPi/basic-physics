@@ -1,4 +1,6 @@
 # Basic Physics
+![image](http://kiraprograms.com/cat-throwing-game/final-demo.gif)
+
 My basic 2d physics engine with everything you need for JavaScript games.
 
 Creating your own physics for a JavaScript game can be a lot of work, 
@@ -19,7 +21,30 @@ It has everything you need for most games, for example platformers or angry bird
 2. Moving objects must be generally circle/square shaped
 
 
-# How to use it?
+# Table of Contents
+1. Examples
+  a. Cat Throwing Game
+3. Installation
+4. Objects
+  a. Static Objects
+  b. Moving Objects
+3. Make Time Happen
+4. Graphics
+  a. Make the Moving Object an Image
+5. Custom Parameters
+6. Level Design
+
+
+# Examples:
+## Cat Throwing Game:
+![image](http://kiraprograms.com/cat-throwing-game/final-demo.gif)
+
+Play with it yourself at http://kiraprograms.com/cat-throwing-game
+
+## Example Platformer
+![image](...)
+
+http://kiraprograms.com/...
 
 # Installation
 The easiest way to install and add this to a project is to download the script [basic-physics.js] and include it in your html.
@@ -35,7 +60,7 @@ Or, if you don't want to download anything, you can use the file on my website:
 There are two types of objects: static objects, and moving objects. Static objects are background objects that don't move, for example, the ground, or a level's obstacle. 
 Moving objects are objects that move, and are impacted by gravity, etc. Note that, as of now, basic physics does not support moving objects bouncing against other moving objects.
 
-# Static Objects
+## Static Objects
 There are two types of static objects: rectangles and diagonals. You can add a rectangle using:
 ```js
 new Rectangle(x, y, width, height, params);
@@ -48,7 +73,7 @@ new Diagonal(x1, y1, x2, y2, params);
 ```
 Where the diagonal line goes from the point (x1,y1) to the point (x2,y2).
 
-# Moving Objects
+## Moving Objects
 As of now, the only moving objects supported are circles. A moving object would be the player in a game (see [how to use static objects for enemies]). You can add a moving object using:
 ```js
 var player = new MovingObject({
@@ -57,8 +82,8 @@ var player = new MovingObject({
   xSp: ___, //the initial x speed of the object
   ySp: ___, //the initial y speed of the object
   size: ___, //the diameter of the circle
-  rotation: ___, //the initial rotation, in radians
-  rotSp: ___, //the initial rotation speed, in radians
+  rotation: ___, //the initial rotation, in degrees
+  rotSp: ___, //the initial rotation speed, in degrees
   bounciness: ___ //how bouncy the object is
 });
 ```
@@ -75,8 +100,9 @@ setInterval(timestep, 30);
 ```
 
 # Graphics
-Right now, the graphics and display of the objects is pretty bland. You might want to add your own custom graphics. You can do this by changing the function used to draw the objects. 
-To make all of the rectangles red, use:
+Right now, the graphics and display of the objects is pretty bland. You might want to add your own custom graphics. You can do this by changing the function used to draw the objects. Make sure to change ths function before defining the first object in order to not use the old drawing function.
+
+To change the function for drawing rectangles, to make all of the rectangles red, use:
 ```js
 Rectangle.prototype.draw = function(){
   //enter custom drawing function here
@@ -93,4 +119,30 @@ Diag.prototype.draw = function(){
 }
 ```
 
-And to change the function for 
+## Make the Moving Object an Image
+You can use the same thing to change how a moving object is drawn. In this example, I will make the moving object an image of a cat. The code for this is:
+```js
+MovingObject.prototype.draw = function(){
+  //this is the code to draw a rotated image.
+  
+  ctx.save();
+  ctx.translate(this.x, this.y);
+  ctx.rotate(this.rotation*Math.PI/180); // rotate the canvas around the center, which is this.x and this.y
+  
+  ctx.drawImage(
+    document.getElementById("catImg"), // what image to draw
+    -this.size/2, // x position
+    -this.size/2, // y position
+    this.size, // width
+    this.size // height
+  );
+
+  ctx.restore(); // un-rotate the canvas
+}
+```
+In this case, you also have to have an image with the id `catImg`, so in the HTML, you need:
+```html
+<img src="weet.png" id="catImg" style="display:none;">
+```
+
+# 
