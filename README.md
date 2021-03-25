@@ -32,14 +32,17 @@ It has everything you need for most games, for example platformers or angry bird
 4. Graphics
     1. Make the Moving Object an Image
 5. Custom Parameters
-6. Level Design
+6. Changing the Level
+7. Level Design
 
 
 # Examples:
 ## Cat Throwing Game:
 ![image](http://kiraprograms.com/cat-throwing-game/final-demo.gif)
 
-Play with it yourself at http://kiraprograms.com/cat-throwing-game
+Play with it yourself: http://kiraprograms.com/cat-throwing-game
+
+More info (how to make this yourself): https://github.com/i8sumPi/basic-physics/tree/main/cat-throwing-game
 
 ## Example Platformer
 ![image](...)
@@ -145,4 +148,14 @@ In this case, you also have to have an image with the id `catImg`, so in the HTM
 <img src="weet.png" id="catImg" style="display:none;">
 ```
 
-# 
+# Custom Parameters
+
+# Changing the Level
+You can use the following code to clear the whole level:
+```js
+allStaticObjects = [];
+```
+Also show how to delete a specific level.
+
+# Level Design
+It can sometimes be a pain to write in all of the numbers when designing a level, so you can use the simple level generator that I made to ease the process: http://kiraprograms.com/cat-throwing-game/levelDesigner.html
